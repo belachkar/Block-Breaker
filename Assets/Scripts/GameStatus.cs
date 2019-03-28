@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
+using UnityEngine;
 
 public class GameStatus : MonoBehaviour {
   // Configuration parameters
@@ -8,16 +8,9 @@ public class GameStatus : MonoBehaviour {
   [SerializeField] TextMeshProUGUI scoreText;
 
   // State variables
-  static int currentScore = 0;
+  public static int currentScore = 0;
 
-  void Awake() {
-    int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
-    if (gameStatusCount > 1) {
-      Destroy(gameObject);
-    } else {
-      DontDestroyOnLoad(gameObject);
-    }
-  }
+
 
   void Start() {
     UpdateScore();
@@ -35,5 +28,9 @@ public class GameStatus : MonoBehaviour {
   public void UpdateScore() {
     print("currentScore: " + currentScore);
     scoreText.text = currentScore.ToString();
+  }
+
+  public void ResetGame() {
+    Destroy(gameObject);
   }
 }
