@@ -46,3 +46,4 @@ MonoBehaviour:
   gameSpeed: 0.8
   scorePerBlockDestroyed: 83
   scoreText: {fileID: 0}
+  isAutoPlayEnabled: 0
