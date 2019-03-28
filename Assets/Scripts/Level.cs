@@ -14,7 +14,7 @@ public class Level : MonoBehaviour {
     gameStatus.UpdateScore();
   }
 
-  public void CountBrekableBlocks() {
+  public void CountBlocks() {
     brekableBlocks++;
   }
 
