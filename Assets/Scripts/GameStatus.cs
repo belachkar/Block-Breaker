@@ -8,7 +8,7 @@ public class GameStatus : MonoBehaviour {
   [SerializeField] TextMeshProUGUI scoreText;
 
   // State variables
-  [SerializeField] int currentScore = 0;
+  static int currentScore = 0;
 
   void Awake() {
     int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
@@ -30,10 +30,6 @@ public class GameStatus : MonoBehaviour {
   public void AddToScore() {
     currentScore += scorePerBlockDestroyed;
     UpdateScore();
-  }
-
-  public int GetCurrentScore() {
-    return currentScore;
   }
 
   public void UpdateScore() {
